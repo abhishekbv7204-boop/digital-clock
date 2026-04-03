@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Digital-clock</title>
+    <title>Pro Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="clock">
-        <h1 id="time">00:00:00</h1>
+<div class="clock">
+    <h1 id="time"></h1>
+    <p id="date"></p>
+    <div class="buttons">
+        <button onclick="toggleFormat()">12/24 H</button>
+        <button onclick="toggleTheme()">🌙/☀️</button>
     </div>
-    <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
