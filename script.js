@@ -6,9 +6,12 @@ function showTime() {
     let s= now.getSeconds();
     let period="";
     if (!is24Hour) {
+        if (h === 0) {
+            h = 12;
+        } else if (h > 12) {
+            h = h - 12;
+        }
         period=h>=12?"PM":"AM";
-        if (h>12)h-=12;
-        if (h===0)h=12;
     }
     h=h< 10 ?"0" +h:h;
     m=m< 10 ?"0" +m:m;
@@ -25,5 +28,5 @@ function toggleFormat() {
 function toggleTheme() {
     document.body.classList.toggle("light");
 }
-setInterval(showTime, 1000);
 showTime();
+setInterval(showTime, 1000);
